@@ -1,5 +1,5 @@
 #include "String.h"
-
+//ggg
 String::String()
 {
 	m_Data = "";
@@ -26,7 +26,7 @@ int String::Lenth()
 }
 
 bool String::IsEmpty()
-{//¿Õ·µ»Ø1 ·´Ö®0
+{//ç©ºè¿”å›1 åä¹‹0
 	return !m_Lenth;
 }
 
@@ -38,9 +38,9 @@ void String::Clear()
 }
 
 int String::Index_normal(String &b)
-{//ÆÕÍ¨°æ±¾µÄ²éÕÒ×Ó´®
+{//æ™®é€šç‰ˆæœ¬çš„æŸ¥æ‰¾å­ä¸²
 	if(this->m_Lenth < b.m_Lenth)
-		return -1;//³¤¶È²»¿ÉÄÜ±È×Ó´®Ğ¡
+		return -1;//é•¿åº¦ä¸å¯èƒ½æ¯”å­ä¸²å°
 
 	int L = b.m_Lenth;
 	String Compare;
@@ -54,7 +54,7 @@ int String::Index_normal(String &b)
 }
 
 int String::Index_next(String &b)
-{//next°æ±¾
+{//nextç‰ˆæœ¬
 	return -1;
 }
 
@@ -96,7 +96,7 @@ int String::Strlen(char *b)
 }
 
 String & String::SubString(int pos, int end)
-{//ÆğÊ¼Î»ÖÃ1 Î»ÖÃ°üÀ¨pos£¬²»°üÀ¨end
+{//èµ·å§‹ä½ç½®1 ä½ç½®åŒ…æ‹¬posï¼Œä¸åŒ…æ‹¬end
 	if (pos < 1 || end > this->m_Lenth)
 	{
 		return String();
@@ -246,7 +246,7 @@ void FindCommentStr(String &a,String &b)
 		t = a;
 		a = b;
 		b = t;
-	}//½«´óĞ¡ÅÅ³É´ÓĞ¡µ½´ó
+	}//å°†å¤§å°æ’æˆä»å°åˆ°å¤§
 
 	String T;
 	for(int i = 0;i < a.m_Lenth;i++)
