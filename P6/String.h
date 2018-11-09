@@ -11,13 +11,23 @@ public:
 	int Lenth();
 	bool IsEmpty();
 	void Clear();
-	String &SubStr(int pos,int end);
+	int Index_normal(String &b);
+	int Index_next(String &b);
+	int next(int j);
+	int Strlen(char *b);
+	String &SubString(int pos,int end);
+	void StrInsert(int pos,String &b);
+	void StrInsert(int pos, char *b);
 	bool operator > (String &b);
 	bool operator < (String &b);
 	bool operator == (String &b);
 	String& operator + (String &b);
+	String& operator = (String &b);
 	~String();
+	//友元
+	friend void FindCommentStr(String &a,String &b);
+	friend void Assignment(char Array[], char *List,int Lenth);//长度默认即定义为List的长度
 };
 
-void Assignment(char Array[], char *List,int Lenth = 0);
+
 
